@@ -8,12 +8,14 @@ let breakTime = 10;
 
 let seconds = "00"
 
+let end_audio = new Audio('audio/za-warudo-time-stop.mp3')
+
 // display
 window.onload = () => {
     document.getElementById("minutes").innerHTML = workTime;
     document.getElementById("seconds").innerHTML = seconds;
 
-    workTitle.classLista.add('active');
+    workTitle.classList.add('active');
 }
 
 // start timer
@@ -47,7 +49,8 @@ function start() {
                     // start break
                     workMinutes = breakMinutes;
                     breakCount++
-
+                    end_audio.play();
+                    
                     // change the painel
                     workTitle.classList.remove('active');
                     breakTitle.classList.add('active');

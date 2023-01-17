@@ -14,15 +14,18 @@
     <script src="https://kit.fontawesome.com/7739b59d8a.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- AUDIO -->
+    <audio id="audioStart" src="/audio/project-blue-lock.wav" preload="auto"></audio>
 </head>
 <body>
     <section>
         <div class="container">
-            <h1>pomodoro timer</h1>
+            <h1><i class="fa-regular fa-clock" style="padding-right: 1rem;"></i>Pomodoro Timer</h1>
             
             <div class="painel">
-                <p id="work">work</p>
-                <p id="break">break</p>
+                <p id="work">working</p>
+                <p id="break">on a break</p>
             </div>
 
             <div class="timer">
@@ -36,7 +39,7 @@
             </div>
 
             <div class="controls">
-                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
+                <button id="start" onclick="start(), document.getElementById('audioStart').play()"><i class="fa-solid fa-play"></i></button>
 
                 <a id='reset' href="/"><i class="fa-solid fa-arrow-rotate-left"></i></a>
             </div>
