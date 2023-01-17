@@ -9,6 +9,7 @@ let breakTime = 10;
 let seconds = "00"
 
 let end_audio = new Audio('audio/za-warudo-time-stop.mp3')
+let end_break_audio = new Audio('audio/gta-san-andreas-ah-shit-here-we-go-again.mp3')
 
 // display
 window.onload = () => {
@@ -58,7 +59,7 @@ function start() {
                     // continue work
                     workMinutes = workTime;
                     breakCount++
-
+                    end_break_audio.play();
                      // change the painel
                      breakTitle.classList.remove('active');
                      workTitle.classList.add('active');
